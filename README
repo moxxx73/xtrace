@@ -1,0 +1,16 @@
+my (hopefully going to be) very epic strace
+--------------------------------------------
+the only other thing that will need implementing other than obvs  
+the tracing itself is support for either spawning a child proc or  
+attaching to pre-existing process.  
+
+# notes n stuff
+on x86 (and x86-64?), when tracing syscalls the value -38 (ENOSYS) is loaded into rax when  
+at a syscall-enter-stop. the original syscall value can be found by accessing orig_rax in  
+struct user_regs_struct (SIGTRAP and all other signals occurs after syscall-exit-stop)  
+
+for now only x86-64 ABI is expected by the program and next to do is:
+- implement PTRACE_ATTACH
+- add support for next 200 or so syscalls
+
+i do intend on developing past these objectives but probably wont update the repo after.
