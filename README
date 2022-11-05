@@ -14,3 +14,4 @@ for now only x86-64 ABI is expected by the program and next to do is:
 - add support for next 200 or so syscalls
 
 i do intend on developing past these objectives but probably wont update the repo after.
+btw, this is a great resource: https://github.com/strace/strace/blob/master/doc/README-linux-ptrace
